@@ -25,8 +25,6 @@ public class PlayerTeamService {
             protected void doInTransactionWithoutResult(TransactionStatus transactionStatus) {
                 Team getTeam = teamDAO.getOne(teamId);
                 Player getPlayer = playerDAO.getOne(playerIdToRemove);
-                boolean found = false;
-                int whichIndex = 0;
 
                 getTeam.getPlayerList().remove(getPlayer);
 
